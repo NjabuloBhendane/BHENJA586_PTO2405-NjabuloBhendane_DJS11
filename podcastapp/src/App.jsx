@@ -1,19 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import MovieCard from './components/MovieCard'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PodcastCard from "./components/PodcastCard";
+import { fetchALLShows } from "./services/podcastApi";
+import Navbar from "./components/NavBar";
+import PodcastGrid from "./components/Grid";
+import PodcastDetail from "./components/PodcastDetail"; // ✅ Import the new component
+import { useState } from "react";
+import { useEffect } from "react";
 
 function App() {
+  const [podcasts, setPodcasts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await fetchALLShows();
+        setPodcasts(data);
+      } catch (error) {
+        console.error("Failed to fetch podcasts:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
-  <>  
- < MovieCard movie = {{title:"Njabulo's film", release_date: "2024"}}/> 
- < MovieCard movie = {{title:"Mpumis's film", release_date: "2025 "}}/>
-  </>
-    
-  )
+    <BrowserRouter>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<PodcastGrid podcasts={podcasts} />} />
+        <Route path="/podcast/:id" element={<PodcastDetail />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-
-
-export default App
+export default App;
