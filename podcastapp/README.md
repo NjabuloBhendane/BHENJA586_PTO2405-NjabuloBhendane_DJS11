@@ -1,12 +1,5 @@
-# React + Vite
+Podcastapp 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi there 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This is the code I have written for my podcastapp app. At the moment I have not come up with a name for it and focused of functionality before the branding. I started by setting up my React file with all the necessary Vite packages and created My Podcast cards where  I would load the information from the API. FOllowed up by fetching the data  on the file called Podcast.ts. 
