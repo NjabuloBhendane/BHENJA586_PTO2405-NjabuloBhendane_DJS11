@@ -1,5 +1,7 @@
 Podcastapp
 
+Presentation link - https://docs.google.com/presentation/d/1gl5S5V_tc5HpLVsz0OKkS-iZW_64X3qEPtqJ8g2_7Os/edit?usp=sharing
+
 Hi there
 
 This is the code I have written for my podcastapp app.
@@ -12,7 +14,7 @@ A comprehensive, modern podcast website built with React, TypeScript, and Tailwi
 
 - **Show Discovery**: Browse and search through available podcasts
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
-- **Favorites System**: Save and organize favorite episodes
+- **Favorites System**: Save and remove favorite episodes
 
 ## Technology Stack
 
@@ -49,4 +51,5 @@ The application will be available at `http://localhost:8080`
 1. **Show Browsing**
    - Display all available shows with preview images
 ```
+
 **Favorites System**
