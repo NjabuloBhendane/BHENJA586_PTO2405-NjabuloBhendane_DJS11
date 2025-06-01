@@ -8,14 +8,19 @@ interface PodcastCardProps {
 }
 
 function PodcastCard({ podcast }: PodcastCardProps) {
-   const {isFavorite, addToFavorites, removeFromFavorites} = usePodcastContext()
-    const favorite = isFavorite(podcast.id)
+  const { isFavorite, addToFavorites, removeFromFavorites } = usePodcastContext();
+  const favorite = isFavorite(podcast.id);
 
-    function onFavoriteClick(e) {
-        e.preventDefault()
-        if (favorite) removeFromFavorites(podcast.id)
-        else addToFavorites(podcast)
+  function onFavoriteClick(e) {
+    e.preventDefault();
+    if (favorite) {
+      removeFromFavorites(podcast.id);
+      alert(`${podcast.title} removed from favorites.`);
+    } else {
+      addToFavorites(podcast);
+      alert(`${podcast.title} added to favorites!`);
     }
+  }
 
   return (
     <Link to={`/podcast/${podcast.id}`} className="podcast-link">
@@ -27,9 +32,12 @@ function PodcastCard({ podcast }: PodcastCardProps) {
             alt={podcast.title}
           />
           <div>
-              <button className={`favorite-btn ${favorite ? "active" : ""}`} onClick={onFavoriteClick}>
-                    ♥
-                </button>
+            <button
+              className={`favorite-btn ${favorite ? "active" : ""}`}
+              onClick={onFavoriteClick}
+            >
+              ♥
+            </button>
           </div>
         </div>
         <div className="podcast-info">
@@ -41,3 +49,4 @@ function PodcastCard({ podcast }: PodcastCardProps) {
 }
 
 export default PodcastCard;
+

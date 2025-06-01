@@ -12,6 +12,11 @@ interface EpisodeItemProps {
   episodesList: Episode[];
 };
 
-function EpisodeItem () {
-    
+function EpisodeItem ({episode,
+  showId,
+  showTitle,
+  seasonNumber,
+  seasonTitle,
+  episodesList}:EpisodeItemProps ) {
+
 }

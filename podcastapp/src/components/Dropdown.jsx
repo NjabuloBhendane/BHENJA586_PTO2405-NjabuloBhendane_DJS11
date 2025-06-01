@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const options = ["Apple", "Banana", "Cherry"];
+const options = ["Sort a - z", "Sort z - a ", "Newest","Oldest"];
 
 function CustomDropdown() {
   const [isOpen, setIsOpen] = useState(false);
