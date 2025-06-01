@@ -10,5 +10,8 @@ interface EpisodeItemProps {
   seasonNumber: number;
   seasonTitle: string;
   episodesList: Episode[];
-}
+};
 
+function EpisodeItem () {
+    
+}
