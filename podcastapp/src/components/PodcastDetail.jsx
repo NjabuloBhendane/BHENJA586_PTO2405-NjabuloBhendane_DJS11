@@ -41,6 +41,7 @@ function PodcastDetail() {
           <i className={`podcast-type ${podcast.type} selected`}>{podcast.type}</i>
           <h2 className = "podcast-detail-title">{podcast.title}</h2>
           <p className = "podcast-detail">{podcast.description}</p>
+          <p className = "podcast-season">{podcast.season} </p>
         </div>
       ) : (
         <h2>Loading...</h2>
