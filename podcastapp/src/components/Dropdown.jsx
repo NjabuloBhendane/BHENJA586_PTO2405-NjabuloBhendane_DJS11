@@ -4,7 +4,7 @@ const options = ["Sort a - z", "Sort z - a ", "Newest","Oldest"];
 
 function CustomDropdown() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState("");
 
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 

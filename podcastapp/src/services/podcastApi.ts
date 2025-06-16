@@ -17,3 +17,12 @@ export const fetchALLShows = async (): Promise<PodcastPreview[]> => {
 };
 
 
+export const searchPodcasts = async (query) => {
+  const response = await fetch(
+    `${API_URL}/search/podcast?api_key=${API_KEY}&query=${encodeURIComponent(
+      query
+    )}`
+  );
+  const data = await response.json();
+  return data.results;
+};

@@ -42,6 +42,10 @@ function PodcastCard({ podcast }: PodcastCardProps) {
         </div>
         <div className="podcast-info">
           <h3>{podcast.title}</h3>
+          <p>Seasons:{podcast.seasons}</p>
+          <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+              {podcast.description}
+            </p>
         </div>
       </div>
     </Link>
