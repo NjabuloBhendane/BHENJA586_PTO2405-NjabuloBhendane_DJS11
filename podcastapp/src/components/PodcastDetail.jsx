@@ -10,6 +10,7 @@ function PodcastDetail() {
   const { isFavorite, addToFavorites, removeFromFavorites } = usePodcastContext();
 
   const favorite = useMemo(() => (podcast ? isFavorite(podcast.id) : false), [podcast, isFavorite]);
+  
 
   useEffect(() => {
     const fetchPodcast = async () => {
